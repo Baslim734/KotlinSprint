@@ -6,10 +6,10 @@ fun main() {
     val interestRate = 16.7 / 100
     val years = 20
     val numberForRounding = 1000.0
-
+    val startingYear = 1
     var futureValue = principal
 
-    for (i in 1..years) {
+    for (i in startingYear..years) {
         futureValue += futureValue * interestRate
     }
 
