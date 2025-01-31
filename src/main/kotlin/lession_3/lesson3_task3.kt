@@ -3,6 +3,8 @@ package org.example.lession_3
 fun main() {
 
     val number = 6
+    val multiplicationTableStart = 1
+    val multiplicationTableEnd = 9
 
     println("$number * 1 = ${number * 1}")
     println("$number * 2 = ${number * 2}")
@@ -14,6 +16,6 @@ fun main() {
     println("$number * 8 = ${number * 8}")
     println("$number * 9 = ${number * 9}")
 
-    println((1..9).joinToString("\n") { "$number x $it = ${number * it}" })
+    println((multiplicationTableStart..multiplicationTableEnd).joinToString("\n") { "$number x $it = ${number * it}" })
 
 }
