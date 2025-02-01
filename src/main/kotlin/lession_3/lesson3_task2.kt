@@ -2,7 +2,6 @@ package org.example.lession_3
 
 fun main() {
 
-
     var surname = "Андреева"
     val firstName = "Татьяна"
     val patronymic = "Сергеевна"
