@@ -4,14 +4,17 @@ package org.example.lesson_4
 fun main() {
 
     val trainingDay = 5
-    val armsAndAbs = trainingDay % 2 != 0
-    val legsAndBack = !armsAndAbs
+    val isEvenTrainingDay = trainingDay % 2 != 0
+    val arms = isEvenTrainingDay
+    val legs = !isEvenTrainingDay
+    val back = !isEvenTrainingDay
+    val abs = isEvenTrainingDay
 
     val output = """
-        Упражнения для рук:       $armsAndAbs
-        Упражнения для пресса:    $armsAndAbs
-        Упражнения для ног:       $legsAndBack
-        Упражнения для спины:     $legsAndBack
+        Упражнения для рук:       $arms
+        Упражнения для ног:       $legs
+        Упражнения для пресса:    $abs
+        Упражнения для спины:     $back
     """.trimIndent()
 
     println(output)
