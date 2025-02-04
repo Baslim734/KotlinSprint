@@ -1,5 +1,8 @@
 package org.example.lesson_4
 
+const val CREW_SIZE_MINIMAL = 55
+const val CREW_SIZE_MAXIMUM = 70
+const val REQUIRED_MINIMAL_PROVISION = 50
 
 fun main() {
 
@@ -15,8 +18,9 @@ fun main() {
     println("Введите, благоприятны ли метеоусловия (true/false):")
     val isWeatherFavorable = readlnOrNull()?.toBoolean() ?: false
 
-    val canSetSail = (!isDamaged && crewSize in 55..70 && provisionsNumber > 50 && isWeatherFavorable) ||
-            (isDamaged && crewSize == 70 && isWeatherFavorable && provisionsNumber >= 50)
+    val canSetSail = (!isDamaged && crewSize in CREW_SIZE_MINIMAL..CREW_SIZE_MAXIMUM &&
+            provisionsNumber > REQUIRED_MINIMAL_PROVISION && isWeatherFavorable) ||
+            (isDamaged && crewSize == CREW_SIZE_MAXIMUM && isWeatherFavorable && provisionsNumber >= REQUIRED_MINIMAL_PROVISION)
 
     if (canSetSail) {
         println("Корабль может отплыть в плавание.")
